@@ -112,3 +112,67 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new artible
 
 */
+
+
+const articles =document.querySelector('.articles')
+
+
+function title(text){
+  let header = document.createElement('h2')
+  header.textContent = text
+  header.style.paddingTop = "100px"
+  return header
+};
+
+function date(text){
+  const date = document.createElement('p')
+  date.textContent =text
+  date.classList.add('date')
+  return date
+};
+
+function Paragraph(text){
+  const Paragraph = document.createElement('p')
+  Paragraph.textContent = text
+  return Paragraph
+}
+
+function newline(){
+  const newline = document.createElement('br')
+  return newline
+}
+
+
+function expandButton(){
+  const expandButton = document.createElement('span')
+  expandButton.classList.add('expandButton')
+  return expandButton
+}
+
+
+// articles.appendChild(title());
+// articles.appendChild(date())
+// articles.appendChild(Paragraph())
+// articles.appendChild(newline())
+// articles.appendChild(Paragraph())
+// articles.appendChild(expandButton())
+
+
+// function createArticle(domObj){
+//   var div = document.createElement("div");
+//   div.classList.add("article");
+// };
+
+// var domArray = data.map(obj => {
+//   return createArticle(obj);
+//  });
+
+//  var articles = document.querySelector(".articles");
+//  domArray.forEach(item => {
+//   articles.appendChild(item);
+//  });
+
+
+
+
+console.log(articles);

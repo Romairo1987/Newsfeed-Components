@@ -20,6 +20,7 @@ let menuItems = [
   </div>
 
   Pass the function an array as it's only argument.
+  
 
   Step 2: Iterate over the array creating a list item <li> element for each item in the array. 
   Add those items to the <ul>
@@ -33,3 +34,64 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+
+function menucreator (array){
+  let menubtn = document.querySelector(".menu-button")
+  let newdiv = document.createElement('div')
+  newdiv.classList.add('menu')
+
+  let listitems = document.createElement('ul')
+  newdiv.appendChild(listitems)
+
+  array.forEach((item)=>{
+    let items = document.createElement('li')
+    item.textContent = item
+    listitems.appendChild(items)
+  });
+
+  menubtn.addEventListener('click', ()=>{
+    newdiv.classList.toggle('menu--open')
+  });
+
+  return newdiv;
+}
+
+let header = document.querySelector('.header')
+header.appendChild(menucreator(menuItems))
+
+
+
+
+
+
+
+// const div = document.createElement('div');
+// div.classList.add('menu');
+
+// const ul = document.createElement('ul');
+// const mbutton = document.querySelector('.menu-button')
+// // const menu = document.querySelectorAll('.menu ')
+
+
+// const body = document.querySelector('.header');
+// body.appendChild(div);
+// div.appendChild(ul);
+
+// function listCreator(text){
+//   const list = document.createElement('li');
+//   list.textContent = text;
+//   return list;
+// };
+
+// menuItems.forEach((item)=>{
+//   let list = listCreator(item);
+//   ul.appendChild(list);
+// })
+
+// mbutton.addEventListener('click',()=>{
+//   menu.classList.toggle('menu--open'); 
+//  })
+
+
+// console.log(body)
